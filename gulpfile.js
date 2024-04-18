@@ -59,3 +59,10 @@ gulp.task("server", function () {
 		})
 	);
 });
+
+gulp.task("clean", function (done) {
+	if (fs.existsSync("./dist/")) {
+		return gulp.src("./dist/", { read: false }).pipe(clean());
+	}
+	done();
+});
