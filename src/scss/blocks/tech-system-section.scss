@@ -1,0 +1,51 @@
+.tech-system-section {
+	width: 80%;
+	padding-left: 5%;
+
+	@media (max-width: 1138px) {
+		width: 100%;
+	}
+
+	&__title {
+		font-size: 80px;
+		line-height: 82px;
+		font-weight: 700;
+		margin-bottom: 20px;
+
+		@media (max-width: 1138px) {
+			font-size: 40px;
+			line-height: 40px;
+		}
+	}
+
+	&__subtitle {
+		max-width: 634px;
+		font-size: 24px;
+		line-height: 40px;
+		margin-bottom: 25px;
+	}
+
+	&__info {
+		display: flex;
+		gap: 50px;
+		margin-bottom: 30px;
+
+		&__figure {
+			&__text {
+				line-height: 34px;
+			}
+		}
+	}
+
+	&__item-btn {
+		margin-bottom: 50px;
+		display: flex;
+		gap: 50px;
+	}
+
+	&__item-arrow {
+		&__link {
+			font-size: 36px;
+		}
+	}
+}
