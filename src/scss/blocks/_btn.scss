@@ -1,0 +1,36 @@
+.btn {
+	border: 1px solid $second-main-color;
+	border-radius: 4px;
+	// padding: 8px 20px 8px 20px;
+	color: $second-main-color;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 24px;
+	text-align: center;
+	background-color: inherit;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+
+	&:hover {
+		background-color: $second-main-color;
+		color: $white-color;
+	}
+}
+
+.btn__md {
+	width: 140px;
+	height: 40px;
+}
+.btn__lg {
+	width: 280px;
+	height: 60px;
+}
+
+.btn__active {
+	background-color: $second-main-color;
+	color: $white-color;
+	&:hover {
+		background-color: inherit;
+		color: $second-main-color;
+	}
+}
