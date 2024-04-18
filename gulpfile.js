@@ -8,3 +8,24 @@ const sourcemaps = require("gulp-sourcemaps");
 // const groupCssMedia = require("gulp-group-css-media-queries");
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
+
+gulp.task("html", function () {
+	return gulp
+		.src("./src/*.html")
+		.pipe(
+			plumber({
+				errorHandler: notify.onError({
+					title: "html",
+					message: "Error: <%= error.message %>",
+					sound: false,
+				}),
+			})
+		)
+		.pipe(
+			fileInclude({
+				prefix: "@@",
+				basepath: "@file",
+			})
+		)
+		.pipe(gulp.dest("./dist/"));
+});
