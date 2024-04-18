@@ -1,19 +1,7 @@
-// const gulp = require("gulp");
-// const fileInclude = require("gulp-file-include");
-// const sass = require("gulp-sass")(require("sass"));
-// const server = require("gulp-server-livereload");
-// const clean = require("gulp-clean");
-// const fs = require("fs");
-// const sourcemaps = require("gulp-sourcemaps");
-// const plumber = require("gulp-plumber");
-// const notify = require("gulp-notify");
-// const fileInclude = require("gulp-file-include");
-
 import fileInclude from "gulp-file-include";
 import gulp from "gulp";
 import * as dartSass from "sass";
 import gulpSass from "gulp-sass";
-const sass = gulpSass(dartSass);
 import clean from "gulp-clean";
 import fs from "fs";
 import sourcemaps from "gulp-sourcemaps";
@@ -22,14 +10,10 @@ import autoprefixer from "gulp-autoprefixer";
 import changed from "gulp-changed";
 import browsersync from "browser-sync";
 
-// import server from "gulp-server-livereload"; // если заработает удалить
-// .pipe(postcss()) deleted
-// import plumber from "gulp-plumber"; //delted
-// import notify from "gulp-notify"; //deleted
-// const sassGlob = require("gulp-sass-glob"); //удалить потом нужно для подключение всех файлом
-
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
+
+const sass = gulpSass(dartSass);
 
 global.$ = {
 	browsersync: browsersync,
@@ -39,8 +23,7 @@ global.$ = {
 gulp.task("html", function () {
 	return gulp
 		.src("./src/html/**/*.html")
-		.pipe(changed("./dist/html/")) //если html не меняется возможно нужно удалить этоту строчку
-
+		.pipe(changed("./dist/html/"))
 		.pipe(
 			fileInclude({
 				prefix: "@@",
@@ -52,7 +35,6 @@ gulp.task("html", function () {
 gulp.task("sass", function () {
 	return gulp
 		.src("./src/scss/*main.scss")
-		.pipe(changed("./dist/css"))
 		.pipe(sourcemaps.init())
 		.pipe(changed("./dist/scss/"))
 		.pipe(autoprefixer())
