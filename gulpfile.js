@@ -50,3 +50,12 @@ gulp.task("sass", function () {
 gulp.task("images", function () {
 	return gulp.src("./src/img//*").pipe(gulp.dest("./dist/img/"));
 });
+
+gulp.task("server", function () {
+	return gulp.src("./dist/").pipe(
+		server({
+			livereload: true,
+			open: true,
+		})
+	);
+});
