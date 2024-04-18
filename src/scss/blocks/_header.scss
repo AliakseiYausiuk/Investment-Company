@@ -1,7 +1,22 @@
-header {
-	background-color: darkblue;
-	padding: 100px 0;
-	font-size: 38px;
-	text-align: center;
+.header {
+	position: sticky;
+	width: 90%;
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	margin-bottom: 60px;
+
+	&__nav {
+		&__list {
+			display: flex;
+			align-items: center;
+			gap: 40px;
+
+			&__item {
+				cursor: pointer;
+			}
+		}
+	}
 }
