@@ -29,3 +29,20 @@ gulp.task("html", function () {
 		)
 		.pipe(gulp.dest("./dist/"));
 });
+gulp.task("sass", function () {
+	return gulp
+		.src("./src/scss/*main.scss")
+		.pipe(
+			plumber({
+				errorHandler: notify.onError({
+					title: "Styles",
+					message: "Error: <%= error.message %>",
+					sound: false,
+				}),
+			})
+		)
+		.pipe(sourcemaps.init())
+		.pipe(sass())
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest("./dist/css"));
+});
