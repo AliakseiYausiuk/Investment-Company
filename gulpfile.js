@@ -46,3 +46,7 @@ gulp.task("sass", function () {
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest("./dist/css"));
 });
+
+gulp.task("images", function () {
+	return gulp.src("./src/img//*").pipe(gulp.dest("./dist/img/"));
+});
