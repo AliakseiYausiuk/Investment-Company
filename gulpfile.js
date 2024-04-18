@@ -72,3 +72,16 @@ gulp.task("watch", function () {
 	gulp.watch("./src//*.html", gulp.parallel("html"));
 	gulp.watch("./src/img//*", gulp.parallel("images"));
 });
+
+gulp.task("fonts", function () {
+	return gulp.src("./src/fonts/*").pipe(gulp.dest("./dist/fonts/"));
+});
+
+gulp.task(
+	"default",
+	gulp.series(
+		"clean",
+		gulp.parallel("html", "sass", "images", "fonts"),
+		gulp.parallel("server", "watch")
+	)
+);
