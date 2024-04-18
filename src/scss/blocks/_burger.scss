@@ -1,0 +1,24 @@
+.burger {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
+	gap: 4px;
+	cursor: pointer;
+	&__item {
+		width: 20px;
+		height: 2.5px;
+		background-color: $white-color;
+	}
+
+	&__item_small {
+		width: 12.5px;
+	}
+
+	&:hover {
+		opacity: 0.3;
+		transition: all 0.2s ease-out;
+	}
+}
