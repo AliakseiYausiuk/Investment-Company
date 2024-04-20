@@ -1,9 +1,16 @@
 .tech-system-section {
 	width: 80%;
 	padding-left: 5%;
+	display: flex;
+	flex-direction: column;
 
 	@media (max-width: 1138px) {
 		width: 100%;
+	}
+
+	@media (max-width: 700px) {
+		font-size: 26px;
+		padding: 0 0;
 	}
 
 	&__title {
@@ -16,6 +23,11 @@
 			font-size: 40px;
 			line-height: 40px;
 		}
+
+		@media (max-width: 700px) {
+			font-size: 26px;
+			order: 1;
+		}
 	}
 
 	&__subtitle {
@@ -23,6 +35,12 @@
 		font-size: 24px;
 		line-height: 40px;
 		margin-bottom: 25px;
+
+		@media (max-width: 700px) {
+			font-size: 14px;
+			line-height: 20px;
+			order: 2;
+		}
 	}
 
 	&__info {
@@ -30,9 +48,26 @@
 		gap: 50px;
 		margin-bottom: 30px;
 
+		@media (max-width: 700px) {
+			flex-direction: column;
+			gap: 20px;
+			order: 4;
+		}
+
 		&__figure {
+			&__img {
+				@media (max-width: 700px) {
+					width: 50px;
+					height: 50px;
+				}
+			}
 			&__text {
 				line-height: 34px;
+
+				@media (max-width: 700px) {
+					font-size: 12px;
+					line-height: 20px;
+				}
 			}
 		}
 	}
@@ -41,11 +76,20 @@
 		margin-bottom: 50px;
 		display: flex;
 		gap: 50px;
+
+		@media (max-width: 700px) {
+			order: 3;
+			gap: 15px;
+		}
 	}
 
 	&__item-arrow {
 		&__link {
 			font-size: 36px;
+		}
+
+		@media (max-width: 1000px) {
+			display: none;
 		}
 	}
 }

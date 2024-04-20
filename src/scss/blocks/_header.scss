@@ -1,22 +1,50 @@
 .header {
 	position: sticky;
+	top: 0;
 	width: 90%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap: 25px;
 	padding: 10px 0;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 	margin-bottom: 60px;
+	z-index: 100;
+
+	&__logo-wrapper {
+		flex: 2;
+	}
 
 	&__nav {
+		display: flex;
+		gap: 25px;
+		align-items: center;
 		&__list {
 			display: flex;
 			align-items: center;
-			gap: 40px;
+			gap: 30px;
 
 			&__item {
 				cursor: pointer;
 			}
 		}
+	}
+
+	&__avatar {
+		display: none;
+
+		@media (max-width: 700px) {
+			display: block;
+		}
+	}
+
+	@media (max-width: 700px) {
+		.btn {
+			display: none;
+		}
+	}
+
+	@media (max-width: 850px) {
+		margin-bottom: 20px;
 	}
 }
