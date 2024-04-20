@@ -4,6 +4,7 @@ import sourcemaps from "gulp-sourcemaps";
 import changed from "gulp-changed";
 import * as dartSass from "sass";
 import gulpSass from "gulp-sass";
+import cleanCSS from "gulp-cleancss";
 
 const sass = gulpSass(dartSass);
 
@@ -12,8 +13,10 @@ gulp.task("sass", function () {
 		.src("./src/scss/*main.scss")
 		.pipe(sourcemaps.init())
 		.pipe(changed("./dist/scss/"))
-		.pipe(autoprefixer())
 		.pipe(sass())
+		.pipe(autoprefixer())
+		.pipe(cleanCSS())
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest("./dist/css"));
+		.pipe(gulp.dest("./dist/css"))
+		.pipe($.browsersync.stream());
 });
