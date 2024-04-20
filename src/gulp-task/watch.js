@@ -9,7 +9,7 @@ gulp.task("watch", function () {
 		"change",
 		$.browsersync.reload
 	);
-	gulp.watch("./src/img/**/*", gulp.parallel("images")).on(
+	gulp.watch("./src/images/**/*", gulp.parallel("images")).on(
 		"change",
 		$.browsersync.reload
 	);
