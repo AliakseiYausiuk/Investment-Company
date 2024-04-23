@@ -18,7 +18,7 @@ global.$ = {
 	browsersync: browsersync,
 	packageJson: require("./package.json"),
 	path: {
-		dest: "../dist/",
+		dest: "./",
 	},
 };
 
