@@ -1,14 +1,26 @@
 .news-section {
+	margin-bottom: 170px;
 	&__header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 60px;
 
+		@media (max-width: 768px) {
+			.btn {
+				display: none;
+			}
+		}
+
 		&__title {
 			font-weight: 700;
 			font-size: 60px;
 			line-height: 70px;
+
+			@media (max-width: 768px) {
+				font-size: 34px;
+				line-height: 42px;
+			}
 		}
 	}
 
