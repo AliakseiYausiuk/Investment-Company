@@ -9,3 +9,9 @@
 			url("../fonts/#{$file}.ttf") format("ttf");
 	}
 }
+
+@mixin media-down($size) {
+	@media (max-width: $size) {
+		@content;
+	}
+}

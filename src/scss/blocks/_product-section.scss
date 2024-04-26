@@ -5,7 +5,7 @@
 	align-items: center;
 	margin-bottom: 130px;
 
-	@media (max-width: 700px) {
+	@include media-down(700px) {
 		display: none;
 	}
 

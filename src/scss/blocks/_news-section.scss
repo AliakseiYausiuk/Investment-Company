@@ -6,7 +6,7 @@
 		align-items: center;
 		margin-bottom: 60px;
 
-		@media (max-width: 768px) {
+		@include media-down(768px) {
 			.btn {
 				display: none;
 			}
@@ -17,7 +17,7 @@
 			font-size: 60px;
 			line-height: 70px;
 
-			@media (max-width: 768px) {
+			@include media-down(768px) {
 				font-size: 34px;
 				line-height: 42px;
 			}
@@ -30,7 +30,7 @@
 		flex-wrap: wrap;
 		gap: 15px;
 
-		@media (max-width: 1323px) {
+		@include media-down(1323px) {
 			justify-content: center;
 		}
 
