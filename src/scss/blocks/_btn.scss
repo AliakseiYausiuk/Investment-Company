@@ -1,7 +1,6 @@
 .btn {
 	border: 1px solid $second-main-color;
 	border-radius: 4px;
-	// padding: 8px 20px 8px 20px;
 	color: $second-main-color;
 	font-weight: 700;
 	font-size: 12px;
@@ -15,22 +14,30 @@
 		background-color: $second-main-color;
 		color: $white-color;
 	}
-}
 
-.btn__md {
-	width: 140px;
-	height: 40px;
-}
-.btn__lg {
-	width: 280px;
-	height: 60px;
-}
+	&.btn-md {
+		width: 140px;
+		height: 40px;
+	}
 
-.btn__active {
-	background-color: $second-main-color;
-	color: $white-color;
-	&:hover {
-		background-color: inherit;
-		color: $second-main-color;
+	&.btn-lg {
+		width: 280px;
+		height: 60px;
+		font-size: 16px;
+	}
+
+	&.btn-xl {
+		width: 320px;
+		height: 60px;
+		font-size: 16px;
+	}
+
+	&.btn-active {
+		background-color: $second-main-color;
+		color: $white-color;
+		&:hover {
+			background-color: inherit;
+			color: $second-main-color;
+		}
 	}
 }
