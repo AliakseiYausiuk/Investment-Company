@@ -13,20 +13,20 @@ gulp.task("images-test", function () {
 	return (
 		gulp
 			.src("./src/images/**/*")
-			.pipe(changed("./dist/images/"))
-			.pipe(
-				imagemin([
-					imageminWebp({
-						quality: 85,
-					}),
-				])
-			)
-			.pipe(rename({ extname: ".webp" }))
-			.pipe(newer("./dist/images/"))
+			// .pipe(changed("./dist/images/"))
+			// .pipe(
+			// 	imagemin([
+			// 		imageminWebp({
+			// 			quality: 85,
+			// 		}),
+			// 	])
+			// )
+			// .pipe(rename({ extname: ".webp" }))
+			// .pipe(newer("./dist/images/"))
 			// .pipe(webp())
-			.pipe(gulp.dest("./dist/images/"))
-			.pipe(gulp.src("./src/images/**/*"))
-			.pipe(changed("./dist/images/"))
+			// .pipe(gulp.dest("./dist/images/"))
+			// .pipe(gulp.src("./src/images/**/*"))
+			// .pipe(changed("./dist/images/"))
 			.pipe(gulp.dest("./dist/images/"))
 	);
 });
