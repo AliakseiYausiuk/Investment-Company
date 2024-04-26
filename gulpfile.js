@@ -8,7 +8,7 @@ import "./src/gulp-task/images.js";
 import "./src/gulp-task/sass.js";
 import "./src/gulp-task/server.js";
 import "./src/gulp-task/watch.js";
-// import "./src/gulp-task/javascript.js";
+import "./src/gulp-task/javascript.js";
 
 // const groupCssMedia = require("gulp-group-css-media-queries");
 
@@ -24,7 +24,7 @@ gulp.task(
 	"default",
 	gulp.series(
 		"clean",
-		gulp.parallel("html", "sass", "images", "fonts"),
+		gulp.parallel("html", "sass", "images", "fonts", "js"),
 		gulp.parallel("server", "watch")
 	)
 );
