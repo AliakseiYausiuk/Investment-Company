@@ -1,6 +1,6 @@
 .programs-section {
 	position: relative;
-	margin-bottom: 100px;
+	margin-bottom: 180px;
 
 	&__pagination {
 		position: absolute;
@@ -44,6 +44,8 @@
 		margin-bottom: 30px;
 
 		@media (max-width: 768px) {
+			font-size: 34px;
+			line-height: 42px;
 			margin-bottom: 10px;
 		}
 	}
@@ -63,6 +65,7 @@
 		display: flex;
 		gap: 5px;
 		height: 312px;
+		overflow: hidden;
 
 		&__card {
 			border-radius: 8px;
