@@ -5,7 +5,7 @@
 		width: 100%;
 		background: linear-gradient(rgba(44, 43, 74), rgba(122, 118, 255, 0.1));
 		display: flex;
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 		padding: 50px;
 		border-radius: 4px;
 
@@ -61,12 +61,11 @@
 
 	&__item {
 		&__header {
-			margin-bottom: 50px;
+			margin-bottom: 20px;
 			display: flex;
 			justify-content: space-between;
 
 			@media (max-width: 768px) {
-				margin-bottom: 20px;
 				.btn {
 					display: none;
 				}
