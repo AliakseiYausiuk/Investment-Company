@@ -8,6 +8,7 @@ import "./src/gulp-task/images.js";
 import "./src/gulp-task/sass.js";
 import "./src/gulp-task/server.js";
 import "./src/gulp-task/watch.js";
+// import "./src/gulp-task/javascript.js";
 
 // const groupCssMedia = require("gulp-group-css-media-queries");
 

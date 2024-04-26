@@ -13,4 +13,8 @@ gulp.task("watch", function () {
 		"change",
 		$.browsersync.reload
 	);
+	// gulp.watch("./src/js/**/*.js", gulp.parallel("js")).on(
+	// 	"change",
+	// 	$.browsersync.reload
+	// );
 });

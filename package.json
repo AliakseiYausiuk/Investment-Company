@@ -2,6 +2,7 @@
 	"type": "module",
 	"devDependencies": {
 		"browser-sync": "^3.0.2",
+		"css-loader": "^7.1.1",
 		"gulp": "^5.0.0",
 		"gulp-autoprefixer": "^9.0.0",
 		"gulp-changed": "^5.0.2",
@@ -19,7 +20,9 @@
 		"gulp-webp": "^5.0.0",
 		"gulp-webp-retina-html": "^1.2.0",
 		"imagemin-webp": "^8.0.0",
-		"sass": "^1.75.0"
+		"sass": "^1.75.0",
+		"style-loader": "^4.0.0",
+		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
 		"imagemin-jpeg-recompress": "^7.1.0",
