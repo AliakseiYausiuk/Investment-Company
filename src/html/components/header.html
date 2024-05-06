@@ -1,6 +1,10 @@
 <header class="header">
 	<div class="header__logo-wrapper">
-		<a class="header__logo-wrapper__link" href="#">
+		<a
+			class="header__logo-wrapper__link"
+			href="#"
+			aria-label="Перейти на главную страницу"
+		>
 			<img
 				class="header__logo-wrapper__link__logo"
 				width="42"
@@ -10,7 +14,7 @@
 			/>
 		</a>
 	</div>
-	<nav class="header__nav">
+	<nav class="header__nav" aria-label="Главная">
 		<ul class="header__nav__list">
 			<li class="header__nav__list__item">
 				<img
@@ -29,13 +33,25 @@
 				/>
 			</li>
 			<li class="header__nav__list__item">
-				<button class="btn btn-md">Личный кабинет</button>
+				<button class="btn btn-md" aria-label="Перейти в личный кабинет">
+					Личный кабинет
+				</button>
 			</li>
 			<li class="header__nav__list__item">
-				<button class="btn btn-md btn-active">Регистрация</button>
+				<button
+					class="btn btn-md btn-active"
+					aria-label="Перейти на страницу регистрации"
+				>
+					Регистрация
+				</button>
 			</li>
 			<li class="header__nav__list__item">
-				<div class="burger">
+				<div
+					class="burger"
+					role="button"
+					tabindex="0"
+					aria-label="Открывающее меню окно"
+				>
 					<span class="burger__item"></span>
 					<span class="burger__item burger__item_small"></span>
 					<span class="burger__item"></span>
