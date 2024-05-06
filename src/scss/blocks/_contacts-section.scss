@@ -30,14 +30,27 @@
 		&__item {
 			display: flex;
 			flex-direction: column;
+			width: 100%;
 
 			p {
 				font-size: 12px;
 				line-height: 24px;
 			}
 
+			.btn {
+				margin-bottom: 20px;
+			}
+
 			@include media-down(768px) {
 				flex-direction: column;
+
+				.btn {
+					width: 100%;
+				}
+
+				img {
+					width: 100%;
+				}
 			}
 		}
 	}

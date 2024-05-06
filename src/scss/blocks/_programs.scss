@@ -11,9 +11,10 @@
 		align-items: center;
 		gap: 10px;
 
-		@include media-down(768px) {
+		@include media-down(810px) {
 			position: static;
 			flex-direction: row;
+			margin-bottom: 10px;
 		}
 
 		&__circle-item {
@@ -25,7 +26,7 @@
 			align-items: center;
 			justify-content: center;
 
-			@include media-down(768px) {
+			@include media-down(1024px) {
 				width: 50px;
 				height: 50px;
 			}
@@ -43,7 +44,7 @@
 		line-height: 70px;
 		margin-bottom: 30px;
 
-		@include media-down(768px) {
+		@include media-down(1024px) {
 			font-size: 34px;
 			line-height: 42px;
 			margin-bottom: 10px;
@@ -88,6 +89,7 @@
 				line-height: 24px;
 				text-align: center;
 				margin-bottom: 20px;
+				width: 80%;
 			}
 
 			&__text {
